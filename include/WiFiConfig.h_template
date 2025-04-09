@@ -1,0 +1,31 @@
+#pragma once
+
+#include <WiFi.h>
+//#include <ESP8266WiFi.h>
+#include <EEPROM.h>
+
+#define dim(x) (sizeof(x) / sizeof((x)[0]))
+
+typedef struct 
+{
+  const char*     name;
+  const char*     ssid;
+  const char*     password;
+  const bool      useDHCP;
+  const IPAddress ownIP;
+  const IPAddress gwIP;
+  const IPAddress subnetIP;
+} WiFiConfig;
+
+const WiFiConfig  wifiConfigs[] = {
+  //{"NAME1", "SSID1", "PASSWORD1", false, IPAddress(10, 1, 1, 10), IPAddress(10, 1, 1, 254), IPAddress(255, 255, 255, 0) },
+  //{"NAME2", "SSID2", "PASSWORD2", false, IPAddress(192, 168, 1, 10), IPAddress(192, 168, 1, 254), IPAddress(255, 255, 0, 0) },
+  //{"", "", "", false, },
+};
+
+extern int _currentConfig /* = -1 */;
+
+int currentConfig();
+bool useWiFiConfig(WiFiConfig config);
+void saveWiFiConfig(int idx);
+int WiFiSetup();
