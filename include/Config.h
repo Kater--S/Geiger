@@ -28,11 +28,9 @@ const int SCLPin =  4;       // 15 26 14
 
 // MQTT connection
 #if USE_MQTTS
-extern WiFiClientSecure wifiClient;
 const char* const mqtt_server = "...";
 const int mqtt_port = 8883;
 #else
-extern WiFiClient wifiClient;
 const char* const mqtt_server = "10.1.8.20";
 const int mqtt_port = 1883;
 #endif

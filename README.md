@@ -6,6 +6,8 @@ It is advisable to wrap the J305 glass tube used in the counter with a black pap
 
 The controller counts the pulses and cumulates them in a sliding 60 second interval. A gliding threshold is also maintained. The node connects to a local WiFi network and publishes its measurements via MQTT; it also shows the current measurements on the display – that's it. All parameters are configured in the source.
 
+Addinitionally, a true random number generator function is configurable. When 64 bytes (configurable) have been generated, they are published as a hex string. This needs 4 events per bit, so the time needed for one such published string depends on the current activity.
+
 Hardware and software might become more elaborated in future versions (e.g. WiFiManager configuration, configuration via MQTT, …).
 
 ## Wiring

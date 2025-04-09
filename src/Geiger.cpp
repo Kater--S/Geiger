@@ -41,23 +41,12 @@
 
 //////// INCLUDES
 
-#include "Config.h"
-
-#include "Connect_MQTT.h"
-//#include "WiFiConfig.h"
-
 #include <SSD1306Wire.h>
-#include "icons.h"
-//#include <credentials.h> // or define mySSID and myPASSWORD and THINGSPEAK_API_KEY
-
-#ifndef CREDENTIALS
-
-// MQTT client
 #include <PubSubClient.h>
 
-
-
-#endif
+#include "Config.h"
+#include "Connect_MQTT.h"
+#include "icons.h"
 
 //////// MISC
 

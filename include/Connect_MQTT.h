@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Config.h"
 
 //////// NETWORK
 
@@ -9,6 +8,9 @@
 
 // MQTT client
 #include <PubSubClient.h>
+
+
+#include "Config.h"
 
 extern bool hasConnection /* = false*/;
 extern IPAddress ip;
